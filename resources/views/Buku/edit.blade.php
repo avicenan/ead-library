@@ -2,7 +2,13 @@
 @section('content')
     {{-- Back Button --}}
     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-3">
-        <a href="{{ route('buku.index') }}" class="btn btn-outline-primary">Koleksi Buku</a>
+        <a href="{{ route('buku.index') }}" class="btn btn-outline-primary d-flex gap-2">
+            <div class="">
+                <span class="material-symbols-rounded fs-6">
+                    book
+                </span>
+            </div> Koleksi Buku
+        </a>
     </div>
 
     {{-- Edit Sebuah Buku --}}
