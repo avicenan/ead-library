@@ -16,7 +16,6 @@
             @method('delete')
             <button type="submit" class="btn btn-outline-danger">Hapus</button>
         </form>
-
     </div>
 
     {{-- Show Sebuah Buku --}}
