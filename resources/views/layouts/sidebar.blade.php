@@ -1,5 +1,4 @@
 <nav class="">
-
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-3 text-white min-vh-100 ">
         <a href="/" class="d-flex align-items-center pb-3 mb-md-3 me-md-auto text-white text-decoration-none">
             <span class="fs-5 d-none d-sm-inline fw-bold">EAD Library Panel</span>
@@ -22,17 +21,35 @@
                     @endif
                 </a>
             </li>
-            <li class="mb-3 @if (Route::is('buku.*')) fw-bold ms-3 @endif">
+            <li class="mb-3 @if (Route::is('buku.index')) fw-bold ms-3 @endif">
                 <a href="/buku" class="nav-link px-0 align-middle text-white d-flex">
                     <div class="">
                         <span class="material-symbols-rounded">
-                            book
+                            book_4
                         </span>
                     </div>
                     <div class="ms-3 d-none d-sm-inline ">
-                        <span>Buku</span>
+                        <span>Koleksi Buku</span>
                     </div>
-                    @if (Route::is('buku.*'))
+                    @if (Route::is('buku.index'))
+                        <div class="ms-3">
+                            <span class="material-symbols-rounded fs-6 text-warning shadow">circle</span>
+                        </div>
+                    @endif
+                </a>
+            </li>
+            {{-- Tambah Buku --}}
+            <li class="mb-3 @if (Route::is('buku.create')) fw-bold ms-3 @endif">
+                <a href="/buku/create" class="nav-link px-0 align-middle text-white d-flex">
+                    <div class="">
+                        <span class="material-symbols-rounded">
+                            add
+                        </span>
+                    </div>
+                    <div class="ms-3 d-none d-sm-inline ">
+                        <span>Tambah Buku</span>
+                    </div>
+                    @if (Route::is('buku.create'))
                         <div class="ms-3">
                             <span class="material-symbols-rounded fs-6 text-warning shadow">circle</span>
                         </div>

@@ -2,7 +2,9 @@
 @section('content')
     {{-- Button Tambah Buku --}}
     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-3">
-        <a href="{{ route('buku.create') }}" class="btn btn-primary">Tambah Buku</a>
+        <a href="{{ route('buku.create') }}" class="btn btn-primary d-flex gap-2">
+            <div class=""><span class="material-symbols-rounded fs-6">add</span></div> Tambah Buku
+        </a>
     </div>
 
     {{-- Alert --}}
