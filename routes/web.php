@@ -8,7 +8,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $nav = 'Dashboard';
+    return view('dashboard', compact('nav'));
 })->name('dashboard');
 
 Route::get('/buku', [BukuController::class, 'index'])->name('buku.index');
