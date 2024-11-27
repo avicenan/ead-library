@@ -19,30 +19,63 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label for="judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="judul" name="judul" value="{{ $buku->judul }}">
+                    <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul"
+                        name="judul" value="{{ old('judul', $buku->judul) }}">
+                    @error('judul')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="deskripsi" class="form-label">Deskripsi</label>
-                    <textarea class="form-control" id="deskripsi" name="deskripsi">{{ $buku->deskripsi }}</textarea>
+                    <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi">{{ old('deskripsi', $buku->deskripsi) }}</textarea>
+                    @error('deskripsi')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="pengarang" class="form-label">Pengarang</label>
-                    <input type="text" class="form-control" id="pengarang" name="pengarang"
-                        value="{{ $buku->pengarang }}">
+                    <input type="text" class="form-control @error('pengarang') is-invalid @enderror" id="pengarang"
+                        name="pengarang" value="{{ old('pengarang', $buku->pengarang) }}">
+                    @error('pengarang')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="penerbit" class="form-label">Penerbit</label>
-                    <input type="text" class="form-control" id="penerbit" name="penerbit" value="{{ $buku->penerbit }}">
+                    <input type="text" class="form-control @error('penerbit') is-invalid @enderror" id="penerbit"
+                        name="penerbit" value="{{ old('penerbit', $buku->penerbit) }}">
+                    @error('penerbit')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                    <input type="number" class="form-control" id="tahun_terbit" name="tahun_terbit"
-                        value="{{ $buku->tahun_terbit }}">
+                    <input type="number" class="form-control @error('tahun_terbit') is-invalid @enderror" id="tahun_terbit"
+                        name="tahun_terbit" value="{{ old('tahun_terbit', $buku->tahun_terbit) }}">
+                    @error('tahun_terbit')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="jumlah_halaman" class="form-label">Jumlah Halaman</label>
-                    <input type="number" class="form-control" id="jumlah_halaman" name="jumlah_halaman"
-                        value="{{ $buku->jumlah_halaman }}">
+                    <input type="number" class="form-control @error('jumlah_halaman') is-invalid @enderror"
+                        id="jumlah_halaman" name="jumlah_halaman"
+                        value="{{ old('jumlah_halaman', $buku->jumlah_halaman) }}">
+                    @error('jumlah_halaman')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <a href="{{ route('buku.index') }}" class="btn btn-danger">Batalkan</a>
                 <button type="submit" class="btn btn-primary">Simpan</button>
